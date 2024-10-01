@@ -4,6 +4,7 @@ import random
 def russian_roulette():
     random_number = random.randint(1,6)
     if random_number == 6:
+        # Opens CD-ROM drive
         ctypes.windll.WINMM.mciSendStringW(u"set cdaudio door open", None, 0, None)
     print(random_number)
 
